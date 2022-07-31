@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+<!doctype html> {% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title> {% block title %}home{% endblock title %}</title>
+</head>
+{% block body %}
+<!--scroller creation-->
+<div class="scroll-left">
+    <p><strong><font face="Bebas Neue" size="15">WELCOME TO SCHOOL MANAGEMENT PORTAL</font></p>
+</div>
+<!--added a carousel-->
+<div class="container-fluid my-0 px-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-l0abel="Slide 3"></button>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.mxicoders.com/blog/wp-content/uploads/2017/03/school-managment1.png" class="d-block w-100" alt="..."  height=500>
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+  </div>
+  </div>
+  <!--considered two divisions for student and teacher login-->
+<div class="b-example-divider"></div>
+
+<div class="container px-4 py-5" id="custom-cards">
+<h2 class="pb-2 border-bottom"><strong><font face="Bebas Neue">STUDENT MANAGEMENT SYSTEM</font></h2>
+<div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+  <div class="col">
+    <div class="div2">
+      <div class="d-flex flex-column h-200 p-5 pb-3 text-white text-shadow-1">
+        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><font face="Bebas Neue" color="black">STUDENT ACCESS</font></h2>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="data:image/png;base64,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" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+            <small><font color="white" face="arial black" color="black">FOR STUDENTS</font></small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href=""/></svg>
+            <small><a href="/slogin"><font face="Arial black" color="blue">LOGIN</font></a></small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="div1">
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><font face="Bebas Neue" color="black">TEACHERS ACCESS</font></h2>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="data:image/png;base64,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" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+            <small><font color="white" face="arial black" color="black">FOR TEACHERS</font></small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href=""/></svg>
+            <small><a href="/tlogin"><font face="Arial black" color="blue">LOGIN</font></a></small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<style>
+    .div1{
+        background-color:green;
+        border-style:ridge;
+      }
+      .div2{
+        background-color:orange;
+        border-style:ridge;
+      }
+      .scroll-left {
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background: white;
+        color: black;
+        border: 1px ridge;
+        }
+        .scroll-left p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            animation: scroll-left 15s linear infinite;
+            }
+            /* Move it (define the animation) */
+            
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+<style>
+{% endblock body%}
